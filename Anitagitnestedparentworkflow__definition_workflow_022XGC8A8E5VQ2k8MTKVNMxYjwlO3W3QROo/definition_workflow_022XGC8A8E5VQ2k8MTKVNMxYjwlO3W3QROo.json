@@ -1,0 +1,185 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_022XGC8A8E5VQ2k8MTKVNMxYjwlO3W3QROo",
+    "name": "Copy(1)-CA Nested Parent",
+    "title": "Copy(1)-CA Nested Parent",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": [
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "input",
+          "name": "i/p parent",
+          "type": "datatype.string",
+          "is_required": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_022XGC8AQMPH52qWYz2vs2rYhA0LbcfqYjb",
+        "object_type": "variable_workflow"
+      }
+    ],
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "Copy(1)-CA Nested Parent",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "no_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_022XGC8C06K5Z3mAZ2oHhKwtzCubCNDygOU",
+        "name": "To Upper",
+        "title": "To Upper",
+        "type": "core.string2upper",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "To Upper",
+          "skip_execution": false,
+          "source": "cisco"
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_022XGC8D0M9YC6z0VShd9Ffv12oE3SCVJ4d",
+        "name": "CA Nested Child",
+        "title": "CA Nested Child",
+        "type": "workflow.sub_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "CA Nested Child",
+          "input": {
+            "variable_workflow_021LZRAF87OI63K0qykIuxrl7tK1GvVGOJQ": "$workflow.definition_workflow_022XGC8A8E5VQ2k8MTKVNMxYjwlO3W3QROo.input.variable_workflow_022XGC8AQMPH52qWYz2vs2rYhA0LbcfqYjb$",
+            "variable_workflow_021LZRMCDANLI1mJQIhUaUPjeO91IpmYP3X": "$workflow.definition_workflow_022XGC8A8E5VQ2k8MTKVNMxYjwlO3W3QROo.output.instance_id$",
+            "variable_workflow_021LZS04QTXQ46CBmt3BZbDUX66cSgt1AgY": "$workflow.definition_workflow_022XGC8A8E5VQ2k8MTKVNMxYjwlO3W3QROo.output.start_time$"
+          },
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "no_target": true
+          },
+          "workflow_id": "definition_workflow_021LZQU3Y9QAJ6I6GGjsG60JXvf7ovazqkb",
+          "workflow_name": "CA Nested Child"
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "subworkflows": [
+    {
+      "workflow": {
+        "unique_name": "definition_workflow_021LZQU3Y9QAJ6I6GGjsG60JXvf7ovazqkb",
+        "name": "CA Nested Child",
+        "title": "CA Nested Child",
+        "type": "generic.workflow",
+        "base_type": "workflow",
+        "variables": [
+          {
+            "schema_id": "datatype.secure_string",
+            "properties": {
+              "value": "",
+              "scope": "input",
+              "name": "Sec i/p-2",
+              "type": "datatype.secure_string",
+              "is_required": true,
+              "is_invisible": false
+            },
+            "unique_name": "variable_workflow_021LZS04QTXQ46CBmt3BZbDUX66cSgt1AgY",
+            "object_type": "variable_workflow"
+          },
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
+              "scope": "input",
+              "name": "i/p-1",
+              "type": "datatype.string",
+              "is_required": true,
+              "is_invisible": false
+            },
+            "unique_name": "variable_workflow_021LZRAF87OI63K0qykIuxrl7tK1GvVGOJQ",
+            "object_type": "variable_workflow"
+          },
+          {
+            "schema_id": "datatype.string",
+            "properties": {
+              "value": "",
+              "scope": "input",
+              "name": "i/p -2",
+              "type": "datatype.string",
+              "is_required": true,
+              "is_invisible": false
+            },
+            "unique_name": "variable_workflow_021LZRMCDANLI1mJQIhUaUPjeO91IpmYP3X",
+            "object_type": "variable_workflow"
+          }
+        ],
+        "properties": {
+          "atomic": {
+            "is_atomic": false
+          },
+          "delete_workflow_instance": false,
+          "display_name": "CA Nested Child",
+          "runtime_user": {
+            "target_default": true
+          },
+          "target": {
+            "no_target": true
+          }
+        },
+        "object_type": "definition_workflow",
+        "actions": [
+          {
+            "unique_name": "definition_activity_021LZQZTO3FLS4rrzCx70Pz2XgjmL4HeqGU",
+            "name": "To Lower",
+            "title": "To Lower",
+            "type": "core.string2lower",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "To Lower",
+              "skip_execution": false,
+              "source": "$workflow.definition_workflow_021LZQU3Y9QAJ6I6GGjsG60JXvf7ovazqkb.input.variable_workflow_021LZRAF87OI63K0qykIuxrl7tK1GvVGOJQ$"
+            },
+            "object_type": "definition_activity"
+          },
+          {
+            "unique_name": "definition_activity_021LZRPB7BUHH3OxHHunF5S2xFdUGbq6JLq",
+            "name": "To Upper",
+            "title": "To Upper",
+            "type": "core.string2upper",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "To Upper",
+              "skip_execution": false,
+              "source": "$workflow.definition_workflow_021LZQU3Y9QAJ6I6GGjsG60JXvf7ovazqkb.input.variable_workflow_021LZRMCDANLI1mJQIhUaUPjeO91IpmYP3X$"
+            },
+            "object_type": "definition_activity"
+          }
+        ],
+        "categories": [
+          "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+        ]
+      }
+    }
+  ],
+  "dependent_workflows": [
+    "definition_workflow_021LZQU3Y9QAJ6I6GGjsG60JXvf7ovazqkb"
+  ]
+}
