@@ -1,0 +1,84 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_021ABA819DZQP5y3kC1YOC3pcjWC2qwc1DE",
+    "name": "HA CHILD ATOMIC 11/8",
+    "title": "HA CHILD ATOMIC 11/8",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": [
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "qwertyui",
+          "scope": "input",
+          "name": "input var",
+          "type": "datatype.string",
+          "is_required": true,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_021ABB4EXAF7G6yQ6hLOMXsVaI1IEsiCyam",
+        "object_type": "variable_workflow"
+      }
+    ],
+    "properties": {
+      "atomic": {
+        "atomic_group": "Atomic",
+        "is_atomic": true
+      },
+      "delete_workflow_instance": false,
+      "display_name": "HA CHILD ATOMIC 11/8",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "no_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_021ABAK8R4GHB28GsbFT1LKg43o1SMrkkVP",
+        "name": "Calculate Date",
+        "title": "Calculate Date",
+        "type": "core.calculate_date",
+        "base_type": "activity",
+        "properties": {
+          "adjustment": 1000,
+          "continue_on_failure": false,
+          "display_name": "Calculate Date",
+          "original_date": "$workflow.definition_workflow_021ABA819DZQP5y3kC1YOC3pcjWC2qwc1DE.output.start_time$",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_021ABATFMG9EY3UAcTcucBc1SGCL2h5QIai",
+        "name": "To Upper",
+        "title": "To Upper",
+        "type": "core.string2upper",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "To Upper",
+          "skip_execution": false,
+          "source": "$workflow.definition_workflow_021ABA819DZQP5y3kC1YOC3pcjWC2qwc1DE.input.variable_workflow_021ABB4EXAF7G6yQ6hLOMXsVaI1IEsiCyam$"
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_020U2ESFK8LTD2yrtOJWsARLIolgzv7oJRk"
+    ]
+  },
+  "categories": {
+    "category_020U2ESFK8LTD2yrtOJWsARLIolgzv7oJRk": {
+      "unique_name": "category_020U2ESFK8LTD2yrtOJWsARLIolgzv7oJRk",
+      "name": "HA_TEST KIT",
+      "title": "HA_TEST KIT",
+      "type": "basic.category",
+      "base_type": "category",
+      "category_type": "custom",
+      "object_type": "category"
+    }
+  }
+}
