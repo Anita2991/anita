@@ -12,11 +12,8 @@
       },
       "delete_workflow_instance": false,
       "display_name": "Ak_meraki_git",
-      "runtime_user": {
-        "target_default": true
-      },
       "target": {
-        "execute_on_workflow_target": true
+        "no_target": true
       }
     },
     "object_type": "definition_workflow",
