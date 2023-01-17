@@ -1,0 +1,127 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_022XEDXZ6KNDC5kfbAuSaxCNdqlCEhYs8OI",
+    "name": "Ak_git_list of tuesday",
+    "title": "Ak_git_list of tuesday",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": null,
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "Ak_git_list of tuesday",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "no_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_022XEGS832DYI0lqHSi6lugyGv7SMEizT5l",
+        "name": "To Upper",
+        "title": "To Upper",
+        "type": "core.string2upper",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "To Upper",
+          "skip_execution": false,
+          "source": "schedule"
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_022XEKJFLBSB60vfbcrz4AXVN8DGWzABCwL",
+        "name": "HTTP Request",
+        "title": "HTTP Request",
+        "type": "web-service.http_request",
+        "base_type": "activity",
+        "properties": {
+          "action_timeout": 180,
+          "allow_auto_redirect": true,
+          "allow_headers_redirect": false,
+          "continue_on_error_status_code": false,
+          "continue_on_failure": false,
+          "display_name": "HTTP Request",
+          "method": "GET",
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "override_workflow_target": true,
+            "target_id": "$module_target;Meraki;securex:ao:meraki$"
+          }
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "triggers": {
+    "triggerschedule_022XEGP2XT3K43ErZDYyiUCUOJiix6E4OcG": {
+      "workflow_id": "definition_workflow_022XEDXZ6KNDC5kfbAuSaxCNdqlCEhYs8OI",
+      "name": "scheduleAK",
+      "title": "",
+      "lowercase_name": "schedule.scheduleak",
+      "type": "schedule",
+      "base_type": "trigger",
+      "ref_id": "schedule_022XEG53MTOG62KYx5h6UTWj0G6awcZEwPf",
+      "version": "1.0.0",
+      "disabled": false,
+      "unique_name": "triggerschedule_022XEGP2XT3K43ErZDYyiUCUOJiix6E4OcG",
+      "object_type": "triggerschedule"
+    }
+  },
+  "schedules": {
+    "schedule_022XEG53MTOG62KYx5h6UTWj0G6awcZEwPf": {
+      "unique_name": "schedule_022XEG53MTOG62KYx5h6UTWj0G6awcZEwPf",
+      "name": "Ak_schedule_tuesday",
+      "type": "basic.schedule",
+      "base_type": "schedule",
+      "properties": {
+        "calendar": "calendar_datelist_022XEFMNRL1QD0ir0h6lul0APpt32Nrciz9",
+        "timezone": "Asia/Kolkata",
+        "starttime": "15:10",
+        "interval_hours": 0,
+        "interval_minutes": 1,
+        "number_of_times": 4,
+        "display_name": "Ak_schedule_tuesday",
+        "description": ""
+      },
+      "version": "1.0.0",
+      "object_type": "schedule"
+    }
+  },
+  "calendars": {
+    "calendar_datelist_022XEFMNRL1QD0ir0h6lul0APpt32Nrciz9": {
+      "unique_name": "calendar_datelist_022XEFMNRL1QD0ir0h6lul0APpt32Nrciz9",
+      "name": "AK_list of tuesday",
+      "title": "AK_list of tuesday",
+      "base_type": "calendar",
+      "type": "calendar.datelist",
+      "properties": {
+        "date_list": [
+          "2023-01-17",
+          "2023-01-24",
+          "2023-01-31"
+        ]
+      },
+      "version": "1.0.0",
+      "object_type": "calendar_datelist"
+    }
+  },
+  "module_targets": [
+    {
+      "module_type": "Meraki",
+      "external_id": "securex:ao:meraki"
+    }
+  ]
+}
