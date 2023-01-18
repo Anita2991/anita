@@ -34,6 +34,20 @@
           "source": "upper"
         },
         "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_022Y8J7YSM8S30Oq4BCm3iAf7P4KqlcZoss",
+        "name": "To Lower",
+        "title": "To Lower",
+        "type": "core.string2lower",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "To Lower",
+          "skip_execution": false,
+          "source": "LOWER"
+        },
+        "object_type": "definition_activity"
       }
     ],
     "categories": [
