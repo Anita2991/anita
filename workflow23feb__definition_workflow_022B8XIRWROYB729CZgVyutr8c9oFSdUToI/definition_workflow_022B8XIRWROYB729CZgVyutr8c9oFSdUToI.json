@@ -1,0 +1,68 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_022B8XIRWROYB729CZgVyutr8c9oFSdUToI",
+    "name": "parent1",
+    "title": "parent1",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": null,
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "parent1",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "no_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_023T1R3NNGY6W5JwJfNVsc6nkXuRcWS6EdG",
+        "name": "Ak_23feb",
+        "title": "Ak_23feb",
+        "type": "workflow.atomic_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "display_name": "Ak_23feb",
+          "runtime_user": {
+            "target_default": true
+          },
+          "target": {
+            "no_target": true
+          },
+          "workflow_id": "definition_workflow_023T1BVGUT4HF3AkOnEU2SB8bFfzjoLBZWJ",
+          "workflow_name": "Ak_23feb"
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_023T1RPB9XFFP1kHW4uyAidnwsGjfGgz3ly",
+        "name": "To Upper",
+        "title": "To Upper",
+        "type": "core.string2upper",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "To Upper",
+          "skip_execution": false,
+          "source": "test"
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "atomic_workflows": [
+    "definition_workflow_023T1BVGUT4HF3AkOnEU2SB8bFfzjoLBZWJ"
+  ],
+  "dependent_workflows": [
+    "definition_workflow_023T1BVGUT4HF3AkOnEU2SB8bFfzjoLBZWJ"
+  ]
+}
