@@ -1,0 +1,103 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_023T1TAO754ZA493OAsJ5JzgDfZVyhqQ6wg",
+    "name": "Copy(1)-parent1",
+    "title": "Copy(1)-parent1",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": null,
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "Copy(1)-parent1",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "no_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_023T1TAQM0CNL09TP5rpgcjXy0zX8C4F6dU",
+        "name": "Ak_23feb",
+        "title": "Ak_23feb",
+        "type": "workflow.atomic_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "display_name": "Ak_23feb",
+          "runtime_user": {
+            "target_default": true
+          },
+          "target": {
+            "no_target": true
+          },
+          "workflow_id": "definition_workflow_023T1BVGUT4HF3AkOnEU2SB8bFfzjoLBZWJ",
+          "workflow_name": "Ak_23feb"
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_023T1TARL575L1xUUUATSbmtTOD9pwQnAgm",
+        "name": "To Upper",
+        "title": "To Upper",
+        "type": "core.string2upper",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "To Upper",
+          "skip_execution": false,
+          "source": "test"
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "triggers": {
+    "triggerschedule_023T1VBWTNP701gh0aRTRHr0TY4BhnLbxul": {
+      "workflow_id": "definition_workflow_023T1TAO754ZA493OAsJ5JzgDfZVyhqQ6wg",
+      "name": "23feb",
+      "title": "",
+      "lowercase_name": "schedule.23feb",
+      "type": "schedule",
+      "base_type": "trigger",
+      "ref_id": "schedule_023T1V9QXE2UY7Jhw1KuBZ4foTNOhxFwkQx",
+      "version": "1.0.0",
+      "disabled": false,
+      "unique_name": "triggerschedule_023T1VBWTNP701gh0aRTRHr0TY4BhnLbxul",
+      "object_type": "triggerschedule"
+    }
+  },
+  "schedules": {
+    "schedule_023T1V9QXE2UY7Jhw1KuBZ4foTNOhxFwkQx": {
+      "unique_name": "schedule_023T1V9QXE2UY7Jhw1KuBZ4foTNOhxFwkQx",
+      "name": "Thursday",
+      "type": "basic.schedule",
+      "base_type": "schedule",
+      "properties": {
+        "calendar": "calendar_recurring_1BMfMd3fofpISGMRps4BWyiLLLF",
+        "timezone": "Asia/Kolkata",
+        "starttime": "20:00",
+        "interval_hours": 0,
+        "interval_minutes": 1,
+        "number_of_times": 2,
+        "display_name": "Thursday",
+        "description": ""
+      },
+      "version": "1.0.0",
+      "object_type": "schedule"
+    }
+  },
+  "atomic_workflows": [
+    "definition_workflow_023T1BVGUT4HF3AkOnEU2SB8bFfzjoLBZWJ"
+  ],
+  "dependent_workflows": [
+    "definition_workflow_023T1BVGUT4HF3AkOnEU2SB8bFfzjoLBZWJ"
+  ]
+}
