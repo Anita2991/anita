@@ -79,7 +79,7 @@
       "object_type": "ruleschedule",
       "version": "1.0.0",
       "properties": {
-        "calendar": "calendar_recurring_027Q1CM94GFK762Io9FZeiKsscm0uzrk37g",
+        "calendar": "calendar_group_027Q1BGMC68U31rOCirFAdL8YDTj5zBtjz1",
         "description": "",
         "display_name": "daily/recurring/group",
         "group_by": false,
@@ -87,7 +87,7 @@
         "interval_minutes": 1,
         "number_of_times": 4,
         "rule_type": "rule_schedule",
-        "starttime": "13:25",
+        "starttime": "13:30",
         "timezone": "Asia/Kolkata",
         "title": "daily/recurring/group",
         "workflows_config": [
@@ -135,9 +135,9 @@
       "object_type": "schedule",
       "rule_id": "ruleschedule_027Q1DX472D1O5SYsSZ0HIIDNMBImqde4hv",
       "properties": {
-        "calendar": "calendar_recurring_027Q1CM94GFK762Io9FZeiKsscm0uzrk37g",
+        "calendar": "calendar_group_027Q1BGMC68U31rOCirFAdL8YDTj5zBtjz1",
         "timezone": "Asia/Kolkata",
-        "starttime": "13:25",
+        "starttime": "13:30",
         "interval_hours": 0,
         "interval_minutes": 1,
         "number_of_times": 4,
@@ -148,29 +148,33 @@
     }
   },
   "calendars": {
-    "calendar_recurring_027Q1CM94GFK762Io9FZeiKsscm0uzrk37g": {
-      "unique_name": "calendar_recurring_027Q1CM94GFK762Io9FZeiKsscm0uzrk37g",
-      "name": "Recurring cal 8/8",
-      "title": "Recurring cal 8/8",
+    "calendar_group_027Q1BGMC68U31rOCirFAdL8YDTj5zBtjz1": {
+      "unique_name": "calendar_group_027Q1BGMC68U31rOCirFAdL8YDTj5zBtjz1",
+      "name": "Group calendar 8/8",
+      "title": "Group calendar 8/8",
       "base_type": "calendar",
-      "type": "calendar.recurring",
+      "type": "calendar.group",
       "properties": {
+        "calendar_exclude": [
+          "calendar_recurring_1BMfMjHOpvnqfcYuwbNrCaNw9VG"
+        ],
+        "calendar_include": [
+          "calendar_recurring_1BMfMWvgiDhSjBQ7hTSyvz3NyVZ",
+          "calendar_recurring_1BMfMW5GeLXecZJo0Q2KrjwQQIv",
+          "calendar_recurring_1BMfMeHT9BLcMorjZ6d827zXeaV",
+          "calendar_recurring_1BMfMcNhIKsalUwsjCDmSfUnmXW",
+          "calendar_recurring_1BMfMfZOtVKaTB6BaLDrNQK52Fc",
+          "calendar_recurring_1BMfMd3fofpISGMRps4BWyiLLLF",
+          "calendar_recurring_1BMfMhDJAkJOyFHVPdAlXhGhG4r",
+          "calendar_recurring_1BMfMqhskK5gwxWWa4onJC9Zr85"
+        ],
         "date_range": {
-          "end_date": "2023-08-09",
+          "end_date": "2023-08-31",
           "start_date": "2023-08-08"
-        },
-        "repeats": {
-          "every": 1,
-          "on": {
-            "day": "none",
-            "day_num": 0,
-            "day_of": "none"
-          },
-          "period": "daily"
         }
       },
       "version": "1.0.0",
-      "object_type": "calendar_recurring"
+      "object_type": "calendar_group"
     }
   },
   "wf_rule_trigger": {
