@@ -1,0 +1,106 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_027PZIC4ZSNON6wNiyRwCvtvWU1xTfuJeGj",
+    "name": "AK 8th aug trigger",
+    "title": "AK 8th aug trigger",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": null,
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "AK 8th aug trigger",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "no_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_027PZIK2L3CJC2UFn8xlPbAsJy3NYrQlBxg",
+        "name": "Sleep",
+        "title": "Sleep",
+        "type": "core.sleep",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Sleep",
+          "skip_execution": false,
+          "sleep_interval": 1
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "rules": {
+    "ruleevent_027PZK9JMSOWA5cz2bATMGeokJk66pdIjaY": {
+      "name": "Ak Task rule 8/8",
+      "title": "Ak Task rule 8/8",
+      "type": "approval_task.rule_event",
+      "rule_type": "rule_event",
+      "base_type": "rule",
+      "object_type": "ruleevent",
+      "version": "1.0.0",
+      "properties": {
+        "conditions": {
+          "left_operand": "$output.subject_line$",
+          "operator": "eqi",
+          "right_operand": "8th august"
+        },
+        "description": "",
+        "disabled": false,
+        "display_name": "Ak Task rule 8/8",
+        "rule_type": "rule_event",
+        "title": "Ak Task rule 8/8",
+        "workflows_config": [
+          {
+            "disabled": false,
+            "workflow_id": "definition_workflow_027PZIC4ZSNON6wNiyRwCvtvWU1xTfuJeGj"
+          }
+        ]
+      },
+      "disabled": false,
+      "unique_name": "ruleevent_027PZK9JMSOWA5cz2bATMGeokJk66pdIjaY"
+    }
+  },
+  "events": {
+    "event_027PZK9JLR6FN6Fkqe4gCs1XpY1qjGyb6yy": {
+      "name": "Ak Task rule 8/8",
+      "title": "Ak Task rule 8/8",
+      "type": "approval_task.event",
+      "base_type": "event",
+      "object_type": "event",
+      "rule_id": "ruleevent_027PZK9JMSOWA5cz2bATMGeokJk66pdIjaY",
+      "target_id": "",
+      "webhook_id": "",
+      "version": "1.0.0",
+      "properties": {
+        "conditions": {
+          "left_operand": "$output.subject_line$",
+          "operator": "eqi",
+          "right_operand": "8th august"
+        },
+        "disabled": false,
+        "display_name": "Ak Task rule 8/8",
+        "rule_type": "rule_event",
+        "title": "Ak Task rule 8/8"
+      },
+      "unique_name": "event_027PZK9JLR6FN6Fkqe4gCs1XpY1qjGyb6yy"
+    }
+  },
+  "wf_rule_trigger": {
+    "triggerevent_027PZK9JOUAL03xEFyPLW32cVyhqP9WUhAB": {
+      "wf_unique_name": "definition_workflow_027PZIC4ZSNON6wNiyRwCvtvWU1xTfuJeGj",
+      "rule_unique_name": "ruleevent_027PZK9JMSOWA5cz2bATMGeokJk66pdIjaY",
+      "trig_unique_name": "triggerevent_027PZK9JOUAL03xEFyPLW32cVyhqP9WUhAB"
+    }
+  }
+}
