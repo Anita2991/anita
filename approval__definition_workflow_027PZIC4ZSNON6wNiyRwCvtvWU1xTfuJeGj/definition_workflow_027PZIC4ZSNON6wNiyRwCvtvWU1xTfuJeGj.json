@@ -71,8 +71,8 @@
       "unique_name": "ruleevent_027PZK9JMSOWA5cz2bATMGeokJk66pdIjaY"
     },
     "ruleevent_027Q1WH6TWBVO6p1p59s9q1tP1zxmcYeL8N": {
-      "name": "8 august",
-      "title": "8 august",
+      "name": "8 august SMTP",
+      "title": "8 august SMTP",
       "type": "email.rule_event",
       "rule_type": "rule_event",
       "base_type": "rule",
@@ -87,13 +87,13 @@
         },
         "description": "",
         "disabled": false,
-        "display_name": "8 august",
+        "display_name": "8 august SMTP",
         "download_attachments": true,
         "folder": "INBOX",
         "group_by": false,
         "rule_type": "rule_event",
         "target_id": "definition_target_027Q1W8MKSX985PcazBf94MeIBUCKNwkxVu",
-        "title": "8 august",
+        "title": "8 august SMTP",
         "workflows_config": [
           {
             "disabled": false,
@@ -103,6 +103,39 @@
       },
       "disabled": false,
       "unique_name": "ruleevent_027Q1WH6TWBVO6p1p59s9q1tP1zxmcYeL8N"
+    },
+    "ruleevent_027Q2WPUHS3JQ3HkYFlQoHBFpCpuj1PItCc": {
+      "name": "AK 8 aug MS-graph",
+      "title": "AK 8 aug MS-graph",
+      "type": "email.rule_event",
+      "rule_type": "rule_event",
+      "base_type": "rule",
+      "object_type": "ruleevent",
+      "version": "1.0.0",
+      "properties": {
+        "action": "read",
+        "conditions": {
+          "left_operand": "$output.message$",
+          "operator": "eqi",
+          "right_operand": "ms-graph"
+        },
+        "description": "",
+        "disabled": false,
+        "display_name": "AK 8 aug MS-graph",
+        "download_attachments": true,
+        "folder": "INBOX",
+        "rule_type": "rule_event",
+        "target_id": "definition_target_027Q2VKWP5W7K0MH45KDXBGVvDgT8Eak7Fn",
+        "title": "AK 8 aug MS-graph",
+        "workflows_config": [
+          {
+            "disabled": false,
+            "workflow_id": "definition_workflow_027PZIC4ZSNON6wNiyRwCvtvWU1xTfuJeGj"
+          }
+        ]
+      },
+      "disabled": false,
+      "unique_name": "ruleevent_027Q2WPUHS3JQ3HkYFlQoHBFpCpuj1PItCc"
     },
     "ruleschedule_027Q1DX472D1O5SYsSZ0HIIDNMBImqde4hv": {
       "name": "daily/recurring/group",
@@ -136,7 +169,7 @@
     }
   },
   "events": {
-    "event_027PZK9JLR6FN6Fkqe4gCs1XpY1qjGyb6yy": {
+    "event_027Q1453K80M74D6mzWDJ7w99rV2PDWyzGw": {
       "name": "Ak Task rule 8/8",
       "title": "Ak Task rule 8/8",
       "type": "approval_task.event",
@@ -152,16 +185,17 @@
           "operator": "eqi",
           "right_operand": "8th august"
         },
+        "description": "",
         "disabled": false,
         "display_name": "Ak Task rule 8/8",
         "rule_type": "rule_event",
         "title": "Ak Task rule 8/8"
       },
-      "unique_name": "event_027PZK9JLR6FN6Fkqe4gCs1XpY1qjGyb6yy"
+      "unique_name": "event_027Q1453K80M74D6mzWDJ7w99rV2PDWyzGw"
     },
-    "event_027Q1WH6PGVMC2ohXi4CpFaETgHfsGxSNkI": {
-      "name": "8 august",
-      "title": "8 august",
+    "event_027Q24WOK6JI31nRSWhfda3D3esfHH4NVE2": {
+      "name": "8 august SMTP",
+      "title": "8 august SMTP",
       "type": "email.event",
       "base_type": "event",
       "object_type": "event",
@@ -178,20 +212,47 @@
         },
         "description": "",
         "disabled": false,
-        "display_name": "8 august",
+        "display_name": "8 august SMTP",
         "download_attachments": true,
         "folder": "INBOX",
         "group_by": false,
         "rule_type": "rule_event",
         "target_id": "definition_target_027Q1W8MKSX985PcazBf94MeIBUCKNwkxVu",
-        "title": "8 august"
+        "title": "8 august SMTP"
       },
-      "unique_name": "event_027Q1WH6PGVMC2ohXi4CpFaETgHfsGxSNkI"
+      "unique_name": "event_027Q24WOK6JI31nRSWhfda3D3esfHH4NVE2"
+    },
+    "event_027Q2WPUELTAT4k7hNYkmEwj7NdjLvcNwLG": {
+      "name": "AK 8 aug MS-graph",
+      "title": "AK 8 aug MS-graph",
+      "type": "email.event",
+      "base_type": "event",
+      "object_type": "event",
+      "rule_id": "ruleevent_027Q2WPUHS3JQ3HkYFlQoHBFpCpuj1PItCc",
+      "target_id": "definition_target_027Q2VKWP5W7K0MH45KDXBGVvDgT8Eak7Fn",
+      "webhook_id": "",
+      "version": "1.0.0",
+      "properties": {
+        "action": "read",
+        "conditions": {
+          "left_operand": "$output.message$",
+          "operator": "eqi",
+          "right_operand": "ms-graph"
+        },
+        "disabled": false,
+        "display_name": "AK 8 aug MS-graph",
+        "download_attachments": true,
+        "folder": "INBOX",
+        "rule_type": "rule_event",
+        "target_id": "definition_target_027Q2VKWP5W7K0MH45KDXBGVvDgT8Eak7Fn",
+        "title": "AK 8 aug MS-graph"
+      },
+      "unique_name": "event_027Q2WPUELTAT4k7hNYkmEwj7NdjLvcNwLG"
     }
   },
   "schedules": {
-    "schedule_027Q1DX44XSF11SfjhJhhXzdMXVWvRptLs6": {
-      "unique_name": "schedule_027Q1DX44XSF11SfjhJhhXzdMXVWvRptLs6",
+    "schedule_027Q1F010AONN0g8SsipRLTfWSXURV7r5CO": {
+      "unique_name": "schedule_027Q1F010AONN0g8SsipRLTfWSXURV7r5CO",
       "name": "daily/recurring/group",
       "type": "basic.schedule",
       "base_type": "schedule",
@@ -258,6 +319,19 @@
         "server": "imap.gmail.com",
         "tls_enabled": true
       }
+    },
+    "definition_target_027Q2VKWP5W7K0MH45KDXBGVvDgT8Eak7Fn": {
+      "unique_name": "definition_target_027Q2VKWP5W7K0MH45KDXBGVvDgT8Eak7Fn",
+      "name": "MS- graph",
+      "title": "MS- graph",
+      "type": "email.azure_graph_endpoint",
+      "base_type": "target",
+      "object_type": "definition_target",
+      "properties": {
+        "default_runtime_user_id": "definition_runtime_user_027Q2VGBWQ6TU58OyfFbVk4WRmhgvdnONZj",
+        "display_name": "MS- graph",
+        "host": "https://graph.microsoft.com/v1.0"
+      }
     }
   },
   "runtime_users": {
@@ -273,23 +347,43 @@
         "password": "*****",
         "sender": "longhornproj2@gmail.com"
       }
+    },
+    "definition_runtime_user_027Q2VGBWQ6TU58OyfFbVk4WRmhgvdnONZj": {
+      "unique_name": "definition_runtime_user_027Q2VGBWQ6TU58OyfFbVk4WRmhgvdnONZj",
+      "name": "8th aug ms-graph",
+      "title": "8th aug ms-graph",
+      "type": "runtime_user.oauth2_azure_graph_credentials",
+      "base_type": "runtime_user",
+      "object_type": "definition_runtime_user",
+      "properties": {
+        "client_id": "e9e0864a-35ad-45e4-a919-8ef03faf817e",
+        "display_name": "8th aug ms-graph",
+        "grant_type": "authorization_code",
+        "scope": "openid offline_access mail.readwrite mail.send user.read",
+        "tenant_id": "f131e32e-2532-4e5f-80fc-f9cd8fcaea27"
+      }
     }
   },
   "wf_rule_trigger": {
-    "triggerevent_027PZK9JOUAL03xEFyPLW32cVyhqP9WUhAB": {
+    "triggerevent_027Q24WNV1FU66qgcv15khIElKsCUAjuDVV": {
       "wf_unique_name": "definition_workflow_027PZIC4ZSNON6wNiyRwCvtvWU1xTfuJeGj",
       "rule_unique_name": "ruleevent_027PZK9JMSOWA5cz2bATMGeokJk66pdIjaY",
-      "trig_unique_name": "triggerevent_027PZK9JOUAL03xEFyPLW32cVyhqP9WUhAB"
+      "trig_unique_name": "triggerevent_027Q24WNV1FU66qgcv15khIElKsCUAjuDVV"
     },
-    "triggerevent_027Q1WH6WN77F0SW2UE0N42IWbFhro9Gfh8": {
+    "triggerevent_027Q24WP1UB9N6mtxecEvBlLtQN6Wcxtf8G": {
       "wf_unique_name": "definition_workflow_027PZIC4ZSNON6wNiyRwCvtvWU1xTfuJeGj",
       "rule_unique_name": "ruleevent_027Q1WH6TWBVO6p1p59s9q1tP1zxmcYeL8N",
-      "trig_unique_name": "triggerevent_027Q1WH6WN77F0SW2UE0N42IWbFhro9Gfh8"
+      "trig_unique_name": "triggerevent_027Q24WP1UB9N6mtxecEvBlLtQN6Wcxtf8G"
     },
-    "triggerschedule_027Q1DX499VJW0BJ3tAZNreHsvKl5rImhjt": {
+    "triggerevent_027Q2WPUJPCG80Zy5JU23IixAJyjfOS2rbS": {
+      "wf_unique_name": "definition_workflow_027PZIC4ZSNON6wNiyRwCvtvWU1xTfuJeGj",
+      "rule_unique_name": "ruleevent_027Q2WPUHS3JQ3HkYFlQoHBFpCpuj1PItCc",
+      "trig_unique_name": "triggerevent_027Q2WPUJPCG80Zy5JU23IixAJyjfOS2rbS"
+    },
+    "triggerschedule_027Q24WOPHXAY3w4MIS7wEXjoCZNRWAkNS9": {
       "wf_unique_name": "definition_workflow_027PZIC4ZSNON6wNiyRwCvtvWU1xTfuJeGj",
       "rule_unique_name": "ruleschedule_027Q1DX472D1O5SYsSZ0HIIDNMBImqde4hv",
-      "trig_unique_name": "triggerschedule_027Q1DX499VJW0BJ3tAZNreHsvKl5rImhjt"
+      "trig_unique_name": "triggerschedule_027Q24WOPHXAY3w4MIS7wEXjoCZNRWAkNS9"
     }
   }
 }
