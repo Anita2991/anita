@@ -69,6 +69,35 @@
       },
       "disabled": false,
       "unique_name": "ruleevent_027PZK9JMSOWA5cz2bATMGeokJk66pdIjaY"
+    },
+    "ruleschedule_027Q1DX472D1O5SYsSZ0HIIDNMBImqde4hv": {
+      "name": "daily/recurring/group",
+      "title": "daily/recurring/group",
+      "type": "schedule.rule_schedule",
+      "rule_type": "rule_schedule",
+      "base_type": "rule",
+      "object_type": "ruleschedule",
+      "version": "1.0.0",
+      "properties": {
+        "calendar": "calendar_datelist_027Q1AO0INJ4M4exNe1iv6StbsYNbGhIsjK",
+        "description": "",
+        "display_name": "daily/recurring/group",
+        "interval_hours": 0,
+        "interval_minutes": 1,
+        "number_of_times": 4,
+        "rule_type": "rule_schedule",
+        "starttime": "13:21",
+        "timezone": "Asia/Kolkata",
+        "title": "daily/recurring/group",
+        "workflows_config": [
+          {
+            "disabled": false,
+            "workflow_id": "definition_workflow_027PZIC4ZSNON6wNiyRwCvtvWU1xTfuJeGj"
+          }
+        ]
+      },
+      "disabled": false,
+      "unique_name": "ruleschedule_027Q1DX472D1O5SYsSZ0HIIDNMBImqde4hv"
     }
   },
   "events": {
@@ -96,11 +125,56 @@
       "unique_name": "event_027PZK9JLR6FN6Fkqe4gCs1XpY1qjGyb6yy"
     }
   },
+  "schedules": {
+    "schedule_027Q1DX44XSF11SfjhJhhXzdMXVWvRptLs6": {
+      "unique_name": "schedule_027Q1DX44XSF11SfjhJhhXzdMXVWvRptLs6",
+      "name": "daily/recurring/group",
+      "type": "basic.schedule",
+      "base_type": "schedule",
+      "object_type": "schedule",
+      "rule_id": "ruleschedule_027Q1DX472D1O5SYsSZ0HIIDNMBImqde4hv",
+      "properties": {
+        "calendar": "calendar_datelist_027Q1AO0INJ4M4exNe1iv6StbsYNbGhIsjK",
+        "timezone": "Asia/Kolkata",
+        "starttime": "13:21",
+        "interval_hours": 0,
+        "interval_minutes": 1,
+        "number_of_times": 4,
+        "display_name": "daily/recurring/group",
+        "description": ""
+      },
+      "version": "1.0.0"
+    }
+  },
+  "calendars": {
+    "calendar_datelist_027Q1AO0INJ4M4exNe1iv6StbsYNbGhIsjK": {
+      "unique_name": "calendar_datelist_027Q1AO0INJ4M4exNe1iv6StbsYNbGhIsjK",
+      "name": "Date list 8/8",
+      "title": "Date list 8/8",
+      "base_type": "calendar",
+      "type": "calendar.datelist",
+      "properties": {
+        "date_list": [
+          "2023-08-08",
+          "2023-08-09",
+          "2023-08-31",
+          "2023-08-19"
+        ]
+      },
+      "version": "1.0.0",
+      "object_type": "calendar_datelist"
+    }
+  },
   "wf_rule_trigger": {
     "triggerevent_027PZK9JOUAL03xEFyPLW32cVyhqP9WUhAB": {
       "wf_unique_name": "definition_workflow_027PZIC4ZSNON6wNiyRwCvtvWU1xTfuJeGj",
       "rule_unique_name": "ruleevent_027PZK9JMSOWA5cz2bATMGeokJk66pdIjaY",
       "trig_unique_name": "triggerevent_027PZK9JOUAL03xEFyPLW32cVyhqP9WUhAB"
+    },
+    "triggerschedule_027Q1DX499VJW0BJ3tAZNreHsvKl5rImhjt": {
+      "wf_unique_name": "definition_workflow_027PZIC4ZSNON6wNiyRwCvtvWU1xTfuJeGj",
+      "rule_unique_name": "ruleschedule_027Q1DX472D1O5SYsSZ0HIIDNMBImqde4hv",
+      "trig_unique_name": "triggerschedule_027Q1DX499VJW0BJ3tAZNreHsvKl5rImhjt"
     }
   }
 }
