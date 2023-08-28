@@ -1,0 +1,209 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_0274R843JJBR24z5pLiNIRc9jNDF3HXDGZv",
+    "name": "Ak template rule 14th july",
+    "title": "Ak template rule 14th july",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": [
+      {
+        "schema_id": "datatype.string",
+        "properties": {
+          "value": "",
+          "scope": "local",
+          "name": "XDR Incident ID",
+          "type": "datatype.string",
+          "description": "Sample local variable to be assigned the Cisco XDR incident ID.",
+          "is_required": false,
+          "display_on_wizard": false,
+          "is_invisible": false
+        },
+        "unique_name": "variable_workflow_0274R843RUPHM4ecK24cjGZdXaKgLTvxSzA",
+        "object_type": "variable_workflow"
+      }
+    ],
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "Ak template rule 14th july",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "no_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_0274R8470W10R1yK4nrIv0JRfaiCIZn8Dnr",
+        "name": "Group",
+        "title": "Sample Action - Assign Incident ID from Trigger Output",
+        "type": "logic.group",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Sample Action - Assign Incident ID from Trigger Output",
+          "skip_execution": false
+        },
+        "object_type": "definition_activity",
+        "actions": [
+          {
+            "unique_name": "definition_activity_0274R84821D0A2V4lKLSnDNtl8i4s53KlNR",
+            "name": "Set Variables",
+            "title": "Set Variables",
+            "type": "core.set_multiple_variables",
+            "base_type": "activity",
+            "properties": {
+              "continue_on_failure": false,
+              "display_name": "Set Variables",
+              "skip_execution": false,
+              "variables_to_update": [
+                {
+                  "variable_to_update": "$workflow.definition_workflow_0274R843JJBR24z5pLiNIRc9jNDF3HXDGZv.local.variable_workflow_0274R843RUPHM4ecK24cjGZdXaKgLTvxSzA$",
+                  "variable_value_new": "$trigger.triggerevent_0274R844TH4YH5YIUZpCnMzQ6qmNK4aYtDB.output.incident.id$"
+                }
+              ]
+            },
+            "object_type": "definition_activity"
+          }
+        ]
+      }
+    ],
+    "categories": [
+      "category_024TS3XB5CE1D6sGxxGUpb1U03KChYjobUb"
+    ],
+    "template_type": "template_workflow.incident_automation_rule"
+  },
+  "categories": {
+    "category_024TS3XB5CE1D6sGxxGUpb1U03KChYjobUb": {
+      "unique_name": "category_024TS3XB5CE1D6sGxxGUpb1U03KChYjobUb",
+      "name": "Automation Rule",
+      "title": "Automation Rule",
+      "type": "basic.category",
+      "base_type": "category",
+      "category_type": "system",
+      "object_type": "category"
+    }
+  },
+  "rules": {
+    "ruleevent_0274R844I3R7B0ISeKzuNXHlvIGuy03GqWa": {
+      "name": "AK -pr rule",
+      "title": "AK -pr rule",
+      "type": "incident.rule_event",
+      "rule_type": "rule_event",
+      "base_type": "rule",
+      "object_type": "ruleevent",
+      "version": "1.0.0",
+      "properties": {
+        "description": "",
+        "disabled": false,
+        "display_name": "AK -pr rule",
+        "group_by": true,
+        "rule_type": "rule_event",
+        "stop_subsequent_rules": false,
+        "title": "AK -pr rule",
+        "workflows_config": [
+          {
+            "disabled": false,
+            "workflow_id": "definition_workflow_0274R843JJBR24z5pLiNIRc9jNDF3HXDGZv"
+          }
+        ]
+      },
+      "disabled": false,
+      "unique_name": "ruleevent_0274R844I3R7B0ISeKzuNXHlvIGuy03GqWa"
+    },
+    "ruleevent_0274RA4AF6KHX5zstRhHAM6DZlqMSAd4l6k": {
+      "name": "AK standalone2",
+      "title": "AK standalone2",
+      "type": "incident.rule_event",
+      "rule_type": "rule_event",
+      "base_type": "rule",
+      "object_type": "ruleevent",
+      "version": "1.0.0",
+      "properties": {
+        "conditions": {
+          "left_operand": "$output.incident.scores.global$",
+          "operator": "gte",
+          "right_operand": 400
+        },
+        "description": "",
+        "disabled": false,
+        "display_name": "AK standalone2",
+        "group_by": false,
+        "rule_type": "rule_event",
+        "title": "AK standalone2",
+        "workflows_config": [
+          {
+            "disabled": false,
+            "workflow_id": "definition_workflow_0274R843JJBR24z5pLiNIRc9jNDF3HXDGZv"
+          }
+        ]
+      },
+      "disabled": false,
+      "unique_name": "ruleevent_0274RA4AF6KHX5zstRhHAM6DZlqMSAd4l6k"
+    }
+  },
+  "events": {
+    "event_0274R844EOTP51XwQcqxY5kR5YFSfJ5R8XK": {
+      "name": "AK -pr rule",
+      "title": "AK -pr rule",
+      "type": "incident.event",
+      "base_type": "event",
+      "object_type": "event",
+      "rule_id": "ruleevent_0274R844I3R7B0ISeKzuNXHlvIGuy03GqWa",
+      "target_id": "",
+      "webhook_id": "",
+      "version": "1.0.0",
+      "properties": {
+        "description": "",
+        "disabled": false,
+        "display_name": "AK -pr rule",
+        "group_by": true,
+        "rule_type": "rule_event",
+        "stop_subsequent_rules": false,
+        "title": "AK -pr rule"
+      },
+      "unique_name": "event_0274R844EOTP51XwQcqxY5kR5YFSfJ5R8XK"
+    },
+    "event_0274RA4AEFN413BSMbU87JmBntjFneregPR": {
+      "name": "AK standalone2",
+      "title": "AK standalone2",
+      "type": "incident.event",
+      "base_type": "event",
+      "object_type": "event",
+      "rule_id": "ruleevent_0274RA4AF6KHX5zstRhHAM6DZlqMSAd4l6k",
+      "target_id": "",
+      "webhook_id": "",
+      "version": "1.0.0",
+      "properties": {
+        "conditions": {
+          "left_operand": "$output.incident.scores.global$",
+          "operator": "gte",
+          "right_operand": 400
+        },
+        "description": "",
+        "disabled": false,
+        "display_name": "AK standalone2",
+        "group_by": false,
+        "rule_type": "rule_event",
+        "title": "AK standalone2"
+      },
+      "unique_name": "event_0274RA4AEFN413BSMbU87JmBntjFneregPR"
+    }
+  },
+  "wf_rule_trigger": {
+    "triggerevent_0274R844TH4YH5YIUZpCnMzQ6qmNK4aYtDB": {
+      "wf_unique_name": "definition_workflow_0274R843JJBR24z5pLiNIRc9jNDF3HXDGZv",
+      "rule_unique_name": "ruleevent_0274R844I3R7B0ISeKzuNXHlvIGuy03GqWa",
+      "trig_unique_name": "triggerevent_0274R844TH4YH5YIUZpCnMzQ6qmNK4aYtDB"
+    },
+    "triggerevent_0274RA4AGFRH64l5Jg5BepONYzAXnGKsBy1": {
+      "wf_unique_name": "definition_workflow_0274R843JJBR24z5pLiNIRc9jNDF3HXDGZv",
+      "rule_unique_name": "ruleevent_0274RA4AF6KHX5zstRhHAM6DZlqMSAd4l6k",
+      "trig_unique_name": "triggerevent_0274RA4AGFRH64l5Jg5BepONYzAXnGKsBy1"
+    }
+  }
+}
