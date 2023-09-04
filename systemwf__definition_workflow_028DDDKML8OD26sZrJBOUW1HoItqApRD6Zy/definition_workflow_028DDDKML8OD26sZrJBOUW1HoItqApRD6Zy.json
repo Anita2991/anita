@@ -1,0 +1,69 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_028DDDKML8OD26sZrJBOUW1HoItqApRD6Zy",
+    "name": "AK system w/f used",
+    "title": "AK system w/f used",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": null,
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "AK system w/f used",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "target_type": "web-service.endpoint",
+        "target_id": "$module_target;Cisco XDR;securex:ao:sxo$",
+        "execute_on_workflow_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_028DDE4N1FCNH28U74JArASAec610SbBL2Q",
+        "name": "Secure Cloud Analytics - Get Device Details by ID",
+        "title": "Secure Cloud Analytics - Get Device Details by ID",
+        "type": "workflow.atomic_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Secure Cloud Analytics - Get Device Details by ID",
+          "input": {
+            "variable_workflow_01PP75I1QJZDS4LqfTB5YTXX6vTmEDKgWnt": "12334445apjc123",
+            "variable_workflow_01PP75I1QK5241dqal76kbRK0YcLY5Q4Ac8": "$workflow.definition_workflow_028DDDKML8OD26sZrJBOUW1HoItqApRD6Zy.output.started_by$"
+          },
+          "runtime_user": {
+            "target_default": true
+          },
+          "skip_execution": false,
+          "target": {
+            "target_type": "web-service.endpoint",
+            "use_workflow_target": true
+          },
+          "workflow_id": "definition_workflow_01PP75I1WO7R94qyiIYxNYSuntNqXcMwihL",
+          "workflow_name": "Secure Cloud Analytics - Get Device Details by ID"
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "atomic_workflows": [
+    "definition_workflow_01PP75I1WO7R94qyiIYxNYSuntNqXcMwihL"
+  ],
+  "dependent_workflows": [
+    "definition_workflow_01PP75I1WO7R94qyiIYxNYSuntNqXcMwihL"
+  ],
+  "module_targets": [
+    {
+      "module_type": "Cisco XDR",
+      "external_id": "securex:ao:sxo"
+    }
+  ]
+}
