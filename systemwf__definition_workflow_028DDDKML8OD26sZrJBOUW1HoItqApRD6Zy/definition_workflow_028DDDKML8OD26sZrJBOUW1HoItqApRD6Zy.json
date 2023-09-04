@@ -48,6 +48,20 @@
           "workflow_name": "Secure Cloud Analytics - Get Device Details by ID"
         },
         "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_028DDO3BB5CF33FovCcVqcyvZNUssrVdi5n",
+        "name": "Sleep",
+        "title": "Sleep",
+        "type": "core.sleep",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Sleep",
+          "skip_execution": false,
+          "sleep_interval": 1
+        },
+        "object_type": "definition_activity"
       }
     ],
     "categories": [
